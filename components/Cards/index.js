@@ -20,31 +20,31 @@
 
 
 function theCards(allData) {
-    //big div variable
+    
     const bigDiv = document.createElement("div");
     bigDiv.classList.add("card");
     
-    //header div variable
-    const headEr = document.createElement("div");
-    headEr.classList.add("headline");
     
-    //author div variable 
+    const headerDiv = document.createElement("div");
+    headerDiv.classList.add("headline");
+    
+    
     const authorDiv = document.createElement("div");
     authorDiv.classList.add("author");
     const authorSpan = document.createElement("span");
     
-    //img div variable
+    
     const imgContainer = document.createElement("div");
     imgContainer.classList.add("img-container");
     const imgSource = document.createElement("img");
     
-    //text content and srcs
-    headEr.textContent = allData.headline;
+    //=== text cont/src === below
+    headerDiv.textContent = allData.headline;
     authorSpan.textContent = allData.authorName;
     imgSource.src = allData.authorPhoto;
     
-    //appending children
-    bigDiv.appendChild(headEr);
+    //=== appendingChild === below
+    bigDiv.appendChild(headerDiv);
     bigDiv.appendChild(authorDiv);
     authorDiv.appendChild(imgContainer);
     imgContainer.appendChild(imgSource);
