@@ -34,7 +34,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 3. What is an event listener? An event listener checks for a triggered event on an element and runs a callback when triggered. example when the mouse is clicked, the background changes to a desired color coded. You can add many events such as two click events as well.
 
-4. Why would we convert a NodeList into an Array? The NodeList cannot be manipulated in the JavaScript only within a browser. When converted it can be manipulated in VSC
+4. Why would we convert a NodeList into an Array? The NodeList cannot be manipulated in the JavaScript only within a browser. When converted it can be manipulated in VSC.
 
 5. What is a component? The function that creates HTML elements and applies data to them.
 
@@ -52,11 +52,11 @@ Your finished project must include all of the following requirements:
 
 * [x] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
 
-* [ ] Following the instructions in the `Header/index.js` file, create the Header component. 
+* [x] Following the instructions in the `Header/index.js` file, create the Header component. 
 
-* [ ] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
+* [x] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
 
-* [ ] Following the instructions in the `Cards/index.js` file, create individual Cards components.
+* [x] Following the instructions in the `Cards/index.js` file, create individual Cards components.
 
 ## Stretch Problems
 

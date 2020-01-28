@@ -10,16 +10,14 @@
 
 
 function createdTabs (data){
-    //==== create element ===
+    
     const divTab = document.createElement('div');
-    //=== set the element ===
+   
     divTab.classList.add('tab');
     divTab.textContent = data;
-    //=== style the element ===
-
+  
     document.querySelector('.topics').appendChild(divTab)
     
-    // console.log(divTopics);
 };
 
 axios.get('https://lambda-times-backend.herokuapp.com/topics')

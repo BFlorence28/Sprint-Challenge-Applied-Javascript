@@ -17,3 +17,73 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+// === attempt at Carousel function ===
+
+function Carousel() {
+  const carousel = document.createElement('div');
+  carousel.classList.add('carousel');
+
+  const leftArrow = document.createElement('div');
+  leftArrow.classList.add('left-button');
+  leftArrow.textContent = ' < ';
+  leftArrow.addEventListener('click', event => {
+
+   
+
+    const posZero = event.target.nextElementSibling; 
+    carousel.insertBefore(posZero, rightArrow);   
+    
+
+    // ===animation issue above===
+  })
+  carousel.appendChild(leftArrow);
+
+  const imgOne = document.createElement('img');
+  imgOne.src = './assets/carousel/mountains.jpeg';
+  imgOne.classList.add('fade');
+  imgOne.classList.add('active');
+  carousel.appendChild(imgOne);
+
+  const imgTwo = document.createElement('img');
+  imgTwo.setAttribute('src', './assets/carousel/computer.jpeg');
+  imgTwo.classList.add('active');
+  imgTwo.classList.add('fade');
+  carousel.appendChild(imgTwo);
+
+  const imgThree = document.createElement('img');
+  imgThree.src = './assets/carousel/trees.jpeg';
+  imgThree.classList.add('active');
+  imgThree.classList.add('fade');
+  carousel.appendChild(imgThree);
+
+  const imgFour = document.createElement('img');
+  imgFour.src = './assets/carousel/turntable.jpeg';
+  imgFour.classList.add('fade');
+  imgFour.classList.add('active');
+  carousel.appendChild(imgFour);
+
+  const rightArrow = document.createElement('div');
+  rightArrow.classList.add('right-button');
+  rightArrow.textContent = ' > ';
+  rightArrow.addEventListener('click', event => {
+
+    
+
+    const posFour = event.target.previousElementSibling;
+    leftArrow.insertAdjacentElement('afterend', posFour);
+
+    
+  })
+  carousel.appendChild(rightArrow);
+
+  return carousel;
+}
+
+const carouselParent = document.querySelector('.carousel-container');
+const carousel = Carousel();
+carouselParent.appendChild(carousel);
+
+const posZero = document.querySelector('img');
+const posOne = posZero.nextElementSibling;
+console.log(posOne);
