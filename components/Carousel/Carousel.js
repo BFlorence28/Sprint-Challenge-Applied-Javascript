@@ -18,64 +18,64 @@
   </div>
 */
 
-// === 1st attempt at Carousel function ===
+// === attempt at Carousel function ===
 
 function Carousel() {
   const carousel = document.createElement('div');
   carousel.classList.add('carousel');
 
-  const left = document.createElement('div');
-  left.classList.add('left-button');
-  left.textContent = ' < ';
-  left.addEventListener('click', event => {
+  const leftArrow = document.createElement('div');
+  leftArrow.classList.add('left-button');
+  leftArrow.textContent = ' < ';
+  leftArrow.addEventListener('click', event => {
 
    
 
-    const pos0 = event.target.nextElementSibling; 
-    carousel.insertBefore(pos0, right);   
+    const posZero = event.target.nextElementSibling; 
+    carousel.insertBefore(posZero, rightArrow);   
     
 
     // ===animation issue above===
   })
-  carousel.appendChild(left);
+  carousel.appendChild(leftArrow);
 
-  const img1 = document.createElement('img');
-  img1.src = './assets/carousel/mountains.jpeg';
-  img1.classList.add('fade');
-  img1.classList.add('active');
-  carousel.appendChild(img1);
+  const imgOne = document.createElement('img');
+  imgOne.src = './assets/carousel/mountains.jpeg';
+  imgOne.classList.add('fade');
+  imgOne.classList.add('active');
+  carousel.appendChild(imgOne);
 
-  const img2 = document.createElement('img');
-  img2.setAttribute('src', './assets/carousel/computer.jpeg');
-  img2.classList.add('active');
-  img2.classList.add('fade');
-  carousel.appendChild(img2);
+  const imgTwo = document.createElement('img');
+  imgTwo.setAttribute('src', './assets/carousel/computer.jpeg');
+  imgTwo.classList.add('active');
+  imgTwo.classList.add('fade');
+  carousel.appendChild(imgTwo);
 
-  const img3 = document.createElement('img');
-  img3.src = './assets/carousel/trees.jpeg';
-  img3.classList.add('active');
-  img3.classList.add('fade');
-  carousel.appendChild(img3);
+  const imgThree = document.createElement('img');
+  imgThree.src = './assets/carousel/trees.jpeg';
+  imgThree.classList.add('active');
+  imgThree.classList.add('fade');
+  carousel.appendChild(imgThree);
 
-  const img4 = document.createElement('img');
-  img4.src = './assets/carousel/turntable.jpeg';
-  img4.classList.add('fade');
-  img4.classList.add('active');
-  carousel.appendChild(img4);
+  const imgFour = document.createElement('img');
+  imgFour.src = './assets/carousel/turntable.jpeg';
+  imgFour.classList.add('fade');
+  imgFour.classList.add('active');
+  carousel.appendChild(imgFour);
 
-  const right = document.createElement('div');
-  right.classList.add('right-button');
-  right.textContent = ' > ';
-  right.addEventListener('click', event => {
+  const rightArrow = document.createElement('div');
+  rightArrow.classList.add('right-button');
+  rightArrow.textContent = ' > ';
+  rightArrow.addEventListener('click', event => {
 
-    // == Not ani beg ===
+    
 
-    const pos4 = event.target.previousElementSibling;
-    left.insertAdjacentElement('afterend', pos4);
+    const posFour = event.target.previousElementSibling;
+    leftArrow.insertAdjacentElement('afterend', posFour);
 
-    // == ani above ==
+    
   })
-  carousel.appendChild(right);
+  carousel.appendChild(rightArrow);
 
   return carousel;
 }
@@ -84,6 +84,6 @@ const carouselParent = document.querySelector('.carousel-container');
 const carousel = Carousel();
 carouselParent.appendChild(carousel);
 
-const pos0 = document.querySelector('img');
-const pos1 = pos0.nextElementSibling;
-console.log(pos1);
+const posZero = document.querySelector('img');
+const posOne = posZero.nextElementSibling;
+console.log(posOne);
